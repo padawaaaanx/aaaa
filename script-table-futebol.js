@@ -19,8 +19,8 @@ class Futebol {
         this._status = ''
     }
     userVip() {
-        if (jsonFutebol.copa.payment == "pended") {
-            console.log("a");
+        if (jsonFutebol.copa.payment != "pended") {
+            modalVip.show();
             this.resetSelect("over");
             return
         }
