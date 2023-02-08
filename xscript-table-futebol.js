@@ -20,70 +20,59 @@ class Futebol {
     }
     userVip() {
         if (jsonFutebol.copa.payment != "pended") {
-            modalVip.show();
-            this.resetSelect("over");
             return
         }
         return !0
     }
     overGols() {
         this._filterSelect = 'over';
-        this.resetSelect("over");
         insertTable($(".table-selected select").val().split("/"), liga)
     }
     gols() {
         if (this.userVip()) {
             this._filterSelect = 'gols';
-            this.resetSelect("gols");
             insertTable($(".table-selected select").val().split("/"), liga)
         }
     }
     underGols() {
         if (this.userVip()) {
             this._filterSelect = 'under';
-            this.resetSelect("under");
             insertTable($(".table-selected select").val().split("/"), liga)
         }
     }
     golsPar() {
         if (this.userVip()) {
             this._filterSelect = 'gols-par';
-            this.resetSelect("gols-par");
             insertTable($(".table-selected select").val().split("/"), liga)
         }
     }
     casaMarca() {
         if (this.userVip()) {
             this._filterSelect = 'casa-marca';
-            this.resetSelect("casa-marca");
             insertTable($(".table-selected select").val().split("/"), liga)
         }
     }
     casaVence() {
         if (this.userVip()) {
             this._filterSelect = 'casa-vence';
-            this.resetSelect("casa-vence");
             insertTable($(".table-selected select").val().split("/"), liga)
         }
     }
     visitanteMarca() {
         if (this.userVip()) {
             this._filterSelect = 'visitante-marca';
-            this.resetSelect("visitante-marca");
             insertTable($(".table-selected select").val().split("/"), liga)
         }
     }
     visitanteVence() {
         if (this.userVip()) {
             this._filterSelect = 'visitante-vence';
-            this.resetSelect("visitante-vence");
             insertTable($(".table-selected select").val().split("/"), liga)
         }
     }
     ambasMarcam() {
         if (this.userVip()) {
             this._filterSelect = 'ambas';
-            this.resetSelect("ambas");
             insertTable($(".table-selected select").val().split("/"), liga)
         }
     }
